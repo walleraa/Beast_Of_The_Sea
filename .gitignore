@@ -1,7 +1,10 @@
 .vsconfig
 Assembly-CSharp-Editor.csproj
+Assembly-CSharp-Editor.sln
 Assembly-CSharp.csproj
 My project.sln
 Library
 Logs
 Temp
+.vs/
+obj/
