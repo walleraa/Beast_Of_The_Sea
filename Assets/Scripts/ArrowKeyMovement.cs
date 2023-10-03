@@ -46,6 +46,7 @@ public class ArrowKeyMovement : MonoBehaviour
             rotation_amount *= rb.velocity.magnitude / top_speed;
 
             // Turn the boat based on horizontal input and current speed
+            // Calculations from ChatGPT
             rb.rotation *= Quaternion.Euler(0f, rotation_amount, 0f);
             rb.velocity = Quaternion.Euler(0f, rotation_amount, 0f) * rb.velocity;
         }
