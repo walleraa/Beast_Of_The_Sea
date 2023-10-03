@@ -34,7 +34,7 @@ public class ArrowKeyMovement : MonoBehaviour
             }
         }
 
-        // Slow the ship down when not moving forward
+        // Add deceleration (water resistance?)
         if (rb.velocity.magnitude > 0f)
         {
             rb.velocity -= rb.velocity * deceleration * Time.deltaTime;
