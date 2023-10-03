@@ -1672,8 +1672,8 @@ GameObject:
   m_Component:
   - component: {fileID: 6311335418231239170}
   - component: {fileID: 3755642845622297537}
-  - component: {fileID: 8146486061950701160}
   - component: {fileID: 1417299055779986340}
+  - component: {fileID: 8516383235545469432}
   m_Layer: 0
   m_Name: Pirate
   m_TagString: Untagged
@@ -1737,28 +1737,6 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   speed: 30
---- !u!64 &8146486061950701160
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5857893993220194168}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 5
-  m_Convex: 0
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 0}
 --- !u!54 &1417299055779986340
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -1786,6 +1764,27 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 84
   m_CollisionDetection: 0
+--- !u!65 &8516383235545469432
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5857893993220194168}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &6204973411244957895
 GameObject:
   m_ObjectHideFlags: 0
