@@ -8,3 +8,4 @@ Logs
 Temp
 .vs/
 obj/
+.DS_Store
