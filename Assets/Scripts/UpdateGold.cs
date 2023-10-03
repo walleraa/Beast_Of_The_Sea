@@ -6,10 +6,11 @@ public class UpdateGold : MonoBehaviour
 {
     public static int gold = 5;
 
-    void OnTriggerEnter(Collider other)
+    void OnCollisionEnter(Collision collision)
     {
         gold--;
         EventBus.Publish<GoldPillaged>(new GoldPillaged(gold));
+        Debug.Log(gold);
     }
 }
 

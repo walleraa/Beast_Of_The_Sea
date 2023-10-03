@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 7376173015201154595}
   - component: {fileID: 6482385816177027317}
   - component: {fileID: 8350032312070538340}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Hatch2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -94,7 +94,7 @@ GameObject:
   - component: {fileID: 8557861133312014884}
   - component: {fileID: 934007243025488188}
   - component: {fileID: 8759425801804333140}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Staircase
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -177,7 +177,7 @@ GameObject:
   - component: {fileID: 6602647887375394}
   - component: {fileID: 7519095715511316962}
   - component: {fileID: 1743719284595361323}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Ship_Windows
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -261,7 +261,7 @@ GameObject:
   - component: {fileID: 6158871979474116715}
   - component: {fileID: 8712187651263794617}
   - component: {fileID: 7664172569940202304}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Hooks
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -344,7 +344,7 @@ GameObject:
   - component: {fileID: 4525168168664324819}
   - component: {fileID: 8653594895472585506}
   - component: {fileID: 3842205910979606352}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Small_Steps
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -427,7 +427,7 @@ GameObject:
   - component: {fileID: 1711630880208441544}
   - component: {fileID: 5564403344498754175}
   - component: {fileID: 3418772960534171986}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Floor
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -510,7 +510,7 @@ GameObject:
   - component: {fileID: 3856522967981964130}
   - component: {fileID: 4392912126059344056}
   - component: {fileID: 5630670907911664598}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Rigs
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -593,7 +593,7 @@ GameObject:
   - component: {fileID: 8659520244746282032}
   - component: {fileID: 2107567422997215937}
   - component: {fileID: 4432623952030589467}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Mast_Parts
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -676,7 +676,7 @@ GameObject:
   - component: {fileID: 8517226940323887917}
   - component: {fileID: 53887406036781938}
   - component: {fileID: 164916943193528673}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Ship_Body
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -759,7 +759,7 @@ GameObject:
   - component: {fileID: 5450132748273797774}
   - component: {fileID: 252870327113716201}
   - component: {fileID: 6354648975711981345}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Rail
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -842,7 +842,7 @@ GameObject:
   - component: {fileID: 5835302713856063897}
   - component: {fileID: 8553867754957826802}
   - component: {fileID: 1502035899532468482}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Side_Windows
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -925,7 +925,7 @@ GameObject:
   - component: {fileID: 7508803251364448013}
   - component: {fileID: 5366974589194933844}
   - component: {fileID: 6844546135666936463}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Mast_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1008,7 +1008,7 @@ GameObject:
   - component: {fileID: 2909426181539831979}
   - component: {fileID: 5778160599863088765}
   - component: {fileID: 3740295821320630165}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Ropes
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1091,7 +1091,7 @@ GameObject:
   - component: {fileID: 933650494996744087}
   - component: {fileID: 4181970485039233563}
   - component: {fileID: 7980643648383011309}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Wheel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1174,7 +1174,7 @@ GameObject:
   - component: {fileID: 6544403017024625137}
   - component: {fileID: 5847913177513153606}
   - component: {fileID: 8032750290140177179}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Window_glass
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1257,7 +1257,7 @@ GameObject:
   - component: {fileID: 4099051975221106597}
   - component: {fileID: 7735839619376640390}
   - component: {fileID: 7388771101813867680}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Wheel_Area
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1341,7 +1341,7 @@ GameObject:
   - component: {fileID: 6328508900124007811}
   - component: {fileID: 8364001762612107891}
   - component: {fileID: 2677812078744066246}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Hatch1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1424,7 +1424,7 @@ GameObject:
   - component: {fileID: 1807643359397189059}
   - component: {fileID: 1953127795243573017}
   - component: {fileID: 2125828631001375518}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Ladders
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1507,7 +1507,7 @@ GameObject:
   - component: {fileID: 8528211416924915638}
   - component: {fileID: 3184802542426406683}
   - component: {fileID: 8732661249339788676}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: front_basket
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1590,7 +1590,7 @@ GameObject:
   - component: {fileID: 5166926260463638955}
   - component: {fileID: 2478849414864677433}
   - component: {fileID: 3136207169106641111}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Jib_back_sails
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1674,7 +1674,7 @@ GameObject:
   - component: {fileID: 3755642845622297537}
   - component: {fileID: 1417299055779986340}
   - component: {fileID: 8516383235545469432}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Pirate
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1796,7 +1796,7 @@ GameObject:
   - component: {fileID: 5212451144748050809}
   - component: {fileID: 4472973314828277594}
   - component: {fileID: 742348664123242748}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Hatch3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1879,7 +1879,7 @@ GameObject:
   - component: {fileID: 7566525104179772131}
   - component: {fileID: 1852380499091584524}
   - component: {fileID: 90136410961984191}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Mast_02
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1964,7 +1964,7 @@ GameObject:
   - component: {fileID: 5246525584565580979}
   - component: {fileID: 882467134024441210}
   - component: {fileID: 7079261461057115154}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Sail_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2047,7 +2047,7 @@ GameObject:
   - component: {fileID: 4542441055059852192}
   - component: {fileID: 7106385838253595050}
   - component: {fileID: 3886982963974916172}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: fore_mast
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2130,7 +2130,7 @@ GameObject:
   - component: {fileID: 9087848080654521083}
   - component: {fileID: 1268768519311352697}
   - component: {fileID: 8501031221386811796}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Sail_02
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2213,7 +2213,7 @@ GameObject:
   - component: {fileID: 270343750540063218}
   - component: {fileID: 641466790264381051}
   - component: {fileID: 2921348036370588173}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Doors
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2296,7 +2296,7 @@ GameObject:
   - component: {fileID: 6847524120854057772}
   - component: {fileID: 4368752488499882498}
   - component: {fileID: 4149762992826464985}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Hatch4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2379,7 +2379,7 @@ GameObject:
   - component: {fileID: 6058947074330348273}
   - component: {fileID: 2214426549293032447}
   - component: {fileID: 3602916438076160026}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Ship_Fin
   m_TagString: Untagged
   m_Icon: {fileID: 0}

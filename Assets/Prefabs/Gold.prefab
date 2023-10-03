@@ -13,7 +13,8 @@ GameObject:
   - component: {fileID: 5755214377305245427}
   - component: {fileID: 365471635332242631}
   - component: {fileID: 230242695127616645}
-  m_Layer: 3
+  - component: {fileID: 584225944010454767}
+  m_Layer: 8
   m_Name: Gold
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -104,7 +105,7 @@ MeshCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 5
-  m_Convex: 0
+  m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: 4300000, guid: 83c43ff4797616741b9121073c7d1191, type: 3}
 --- !u!114 &230242695127616645
@@ -117,5 +118,18 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 2ad6e9af031ad48028b87a47b28ce3cf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pillage_counter: 5
+--- !u!114 &584225944010454767
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3973697960257901189}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8be21125c0a034dc2bb63402fc4f8799, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
