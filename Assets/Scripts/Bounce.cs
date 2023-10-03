@@ -20,4 +20,12 @@ public class Bounce : MonoBehaviour
             rb.velocity = Vector3.back * bounce_speed;
         }
     }
+
+    private void OnCollisionStay(Collision collision)
+    {
+        if (collision.gameObject.layer == 3)
+        {
+            rb.velocity = Vector3.back * bounce_speed;
+        }
+    }
 }

@@ -33,8 +33,9 @@ public class ArrowKeyMovement : MonoBehaviour
                 rb.AddRelativeForce(Vector3.forward * acceleration);
             }
         }
+
         // Slow the ship down when not moving forward
-        else if (rb.velocity.magnitude > 0f)
+        if (rb.velocity.magnitude > 0f)
         {
             rb.velocity -= rb.velocity * deceleration * Time.deltaTime;
         }
