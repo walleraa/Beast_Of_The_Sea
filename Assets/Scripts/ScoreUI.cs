@@ -14,7 +14,7 @@ public class ScoreUI : MonoBehaviour
 
     void _OnScoreUpdated(ScoreEvent e)
     {
-        GetComponent<Text>().text = "Score : " + e.new_score;
+        GetComponent<Text>().text = "Gold: " + e.new_score + "\n" + "Pirates: ";
     }
 
     private void OnDestroy()
