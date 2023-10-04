@@ -10,6 +10,7 @@ public class SlowUp : MonoBehaviour
     private Rigidbody rb;
     private bool is_down = false;
     private ArrowKeyMovement arrow_key_movement_script;
+    private Bounce bounce_script;
     private bool controls_locked = false;
     
 
@@ -17,6 +18,7 @@ public class SlowUp : MonoBehaviour
     {
         rb = GetComponent<Rigidbody>();
         arrow_key_movement_script = GetComponent<ArrowKeyMovement>();
+        bounce_script = GetComponent<Bounce>();
     }
 
     private void Update()
@@ -45,10 +47,12 @@ public class SlowUp : MonoBehaviour
         // Lock conrols
         controls_locked = true;
         arrow_key_movement_script.SetControlLock(controls_locked);
+        bounce_script.SetIsDescending(true);
 
         // Set rotation and velocity to go down
         rb.velocity = direction * descend_speed;
         transform.rotation = Quaternion.LookRotation(direction);
+        Debug.Log(rb.velocity);
 
         yield return new WaitForSeconds(down_timer);
 
@@ -60,6 +64,7 @@ public class SlowUp : MonoBehaviour
         // Unlock controls
         controls_locked = false;
         arrow_key_movement_script.SetControlLock(controls_locked);
+        bounce_script.SetIsDescending(false);
 
         is_down = true;
         arrow_key_movement_script.SetIsDown(is_down);
@@ -73,6 +78,7 @@ public class SlowUp : MonoBehaviour
         // Lock conrols
         controls_locked = true;
         arrow_key_movement_script.SetControlLock(controls_locked);
+        bounce_script.SetIsAscending(true);
 
         // Set rotation and velocity to go up
         rb.velocity = direction * descend_speed;
@@ -88,6 +94,7 @@ public class SlowUp : MonoBehaviour
         // Unlock controls
         controls_locked = false;
         arrow_key_movement_script.SetControlLock(controls_locked);
+        bounce_script.SetIsAscending(false);
 
         is_down = false;
         arrow_key_movement_script.SetIsDown(is_down);
