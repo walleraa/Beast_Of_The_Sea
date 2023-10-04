@@ -8,9 +8,14 @@ public class ArrowKeyMovement : MonoBehaviour
     public float top_speed = 40f;
     public float deceleration = 1f;
     public float turn_speed = 30f;
+    public float water_acceleration = 4f;
+    public float water_speed = 60f;
+    public float water_deceleration = 4f;
 
     private Rigidbody rb;
     private float current_speed;
+    private bool controls_locked = false;
+    private bool is_down = false;
 
     private void Start()
     {
@@ -20,35 +25,59 @@ public class ArrowKeyMovement : MonoBehaviour
 
     private void Update()
     {
-        float horizontal_input = Input.GetAxis("Horizontal");
-        float vertical_input = Input.GetAxis("Vertical");
-        float rotation_amount = horizontal_input * turn_speed * Time.deltaTime;
-
-        // Move the ship forward when holding forward
-        if (vertical_input > 0)
+        if (!controls_locked)
         {
-            // Don't surpass top speed
-            if (current_speed < top_speed)
+            float horizontal_input = Input.GetAxis("Horizontal");
+            float vertical_input = Input.GetAxis("Vertical");
+            float rotation_amount = horizontal_input * turn_speed * Time.deltaTime;
+
+            // Move the ship forward when holding forward
+            if (vertical_input > 0)
             {
-                rb.AddRelativeForce(Vector3.forward * acceleration);
+                if (!is_down)
+                {
+                    // Don't surpass top speed
+                    if (current_speed < top_speed)
+                    {
+                        rb.AddRelativeForce(Vector3.forward * acceleration);
+                    }
+                }
+                else
+                {
+                    // Don't surpass top water speed
+                    if (current_speed < water_speed)
+                    {
+                        rb.AddRelativeForce(Vector3.forward * water_acceleration);
+                    }
+                }
+            }
+
+            // Add deceleration (water resistance?)
+            if (rb.velocity.magnitude > 0f)
+            {
+                rb.velocity -= rb.velocity * deceleration * Time.deltaTime;
+            }
+
+            // Only turn the ship when moving
+            if (rb.velocity.magnitude > 0f)
+            {
+                rotation_amount *= rb.velocity.magnitude / top_speed;
+
+                // Turn the boat based on horizontal input and current speed
+                // Calculations from ChatGPT
+                rb.rotation *= Quaternion.Euler(0f, rotation_amount, 0f);
+                rb.velocity = Quaternion.Euler(0f, rotation_amount, 0f) * rb.velocity;
             }
         }
+    }
 
-        // Add deceleration (water resistance?)
-        if (rb.velocity.magnitude > 0f)
-        {
-            rb.velocity -= rb.velocity * deceleration * Time.deltaTime;
-        }
+    public void SetControlLock(bool controls)
+    {
+        controls_locked = controls;
+    }
 
-        // Only turn the ship when moving
-        if (rb.velocity.magnitude > 0f)
-        {
-            rotation_amount *= rb.velocity.magnitude / top_speed;
-
-            // Turn the boat based on horizontal input and current speed
-            // Calculations from ChatGPT
-            rb.rotation *= Quaternion.Euler(0f, rotation_amount, 0f);
-            rb.velocity = Quaternion.Euler(0f, rotation_amount, 0f) * rb.velocity;
-        }
+    public void SetIsDown(bool down)
+    {
+        is_down = down;
     }
 }
