@@ -1376,7 +1376,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 3675036627870543996, guid: b0470a7873c04482186842d4af4555f4, type: 3}
       propertyPath: m_Constraints
-      value: 112
+      value: 116
       objectReference: {fileID: 0}
     - target: {fileID: 5590298611268065505, guid: b0470a7873c04482186842d4af4555f4, type: 3}
       propertyPath: water_speed
@@ -1390,6 +1390,10 @@ PrefabInstance:
       propertyPath: water_deceleration
       value: 0.5
       objectReference: {fileID: 0}
+    - target: {fileID: 5594801493724751240, guid: b0470a7873c04482186842d4af4555f4, type: 3}
+      propertyPath: bounce_speed
+      value: 20
+      objectReference: {fileID: 0}
     - target: {fileID: 5892695186024512600, guid: b0470a7873c04482186842d4af4555f4, type: 3}
       propertyPath: m_Name
       value: Beast of the Sea
@@ -1400,7 +1404,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7689653758829159941, guid: b0470a7873c04482186842d4af4555f4, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 4.75
+      value: 4.5
       objectReference: {fileID: 0}
     - target: {fileID: 7689653758829159941, guid: b0470a7873c04482186842d4af4555f4, type: 3}
       propertyPath: m_LocalPosition.z
@@ -1436,7 +1440,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8854250849066325251, guid: b0470a7873c04482186842d4af4555f4, type: 3}
       propertyPath: down_timer
-      value: 3
+      value: 2.75
       objectReference: {fileID: 0}
     - target: {fileID: 8854250849066325251, guid: b0470a7873c04482186842d4af4555f4, type: 3}
       propertyPath: descend_speed

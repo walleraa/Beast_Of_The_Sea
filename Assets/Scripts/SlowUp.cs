@@ -12,7 +12,7 @@ public class SlowUp : MonoBehaviour
     private ArrowKeyMovement arrow_key_movement_script;
     private Bounce bounce_script;
     private bool controls_locked = false;
-    
+    private RigidbodyConstraints constraints = RigidbodyConstraints.FreezeRotationX | RigidbodyConstraints.FreezeRotationY | RigidbodyConstraints.FreezeRotationZ;
 
     private void Start()
     {
@@ -46,7 +46,8 @@ public class SlowUp : MonoBehaviour
 
         // Lock conrols
         controls_locked = true;
-        arrow_key_movement_script.SetControlLock(controls_locked);
+        arrow_key_movement_script.enabled = !controls_locked;
+        rb.constraints = constraints;
         bounce_script.SetIsDescending(true);
 
         // Set rotation and velocity to go down
@@ -63,7 +64,8 @@ public class SlowUp : MonoBehaviour
 
         // Unlock controls
         controls_locked = false;
-        arrow_key_movement_script.SetControlLock(controls_locked);
+        arrow_key_movement_script.enabled = !controls_locked;
+        rb.constraints = constraints | RigidbodyConstraints.FreezePositionY;
         bounce_script.SetIsDescending(false);
 
         is_down = true;
@@ -77,7 +79,8 @@ public class SlowUp : MonoBehaviour
 
         // Lock conrols
         controls_locked = true;
-        arrow_key_movement_script.SetControlLock(controls_locked);
+        arrow_key_movement_script.enabled = !controls_locked;
+        rb.constraints = constraints;
         bounce_script.SetIsAscending(true);
 
         // Set rotation and velocity to go up
@@ -93,7 +96,8 @@ public class SlowUp : MonoBehaviour
 
         // Unlock controls
         controls_locked = false;
-        arrow_key_movement_script.SetControlLock(controls_locked);
+        arrow_key_movement_script.enabled = !controls_locked;
+        rb.constraints = constraints | RigidbodyConstraints.FreezePositionY;
         bounce_script.SetIsAscending(false);
 
         is_down = false;

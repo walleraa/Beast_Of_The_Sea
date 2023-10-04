@@ -20,6 +20,18 @@ public class Bounce : MonoBehaviour
     private void OnCollisionEnter(Collision collision)
     {
         Vector3 back = transform.rotation * Vector3.back;
+
+        // Prevent bug where player gets stuck and doesn't bounce
+        if (back.x < 0 && back.x > -1)
+            back.x -= 1;
+        else if (back.x > 0 && back.x < 1)
+            back.x += 1;
+        if (back.z < 0 && back.z > -1)
+            back.z -= 1;
+        else if (back.z > 0 && back.z < 1)
+            back.z += 1;
+
+        // Set dedicated y velocity to prevent bounce interefering with down and rise
         if (is_descending)
             back.y = descend_speed/bounce_speed;
         else if (is_ascending)
@@ -27,6 +39,10 @@ public class Bounce : MonoBehaviour
 
         if (collision.gameObject.layer == 3 || collision.gameObject.layer == 8)
         {
+            // Fine I'll do an actual bounce
+            //back.x *= -1;
+            //back.z *= -1;
+
             rb.velocity = back * bounce_speed;
         }
     }
