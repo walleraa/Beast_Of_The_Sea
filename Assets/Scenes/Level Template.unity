@@ -1436,7 +1436,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8854250849066325251, guid: b0470a7873c04482186842d4af4555f4, type: 3}
       propertyPath: down_timer
-      value: 2.5
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 8854250849066325251, guid: b0470a7873c04482186842d4af4555f4, type: 3}
+      propertyPath: descend_speed
+      value: 25
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

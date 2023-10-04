@@ -16,6 +16,7 @@ public class Bounce : MonoBehaviour
     private void OnCollisionEnter(Collision collision)
     {
         Vector3 back = transform.rotation * Vector3.back;
+        //back -= Vector3.down;
         if (collision.gameObject.layer == 3 || collision.gameObject.layer == 8)
         { 
             rb.velocity = back * bounce_speed;
