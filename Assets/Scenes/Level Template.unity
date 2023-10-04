@@ -1039,6 +1039,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f947f4d12801c4d03a209d7c9381fb9f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  gold: 2
+  pirates: 1
 --- !u!114 &1601171369
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1229,6 +1231,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1892394120}
     m_Modifications:
+    - target: {fileID: 230242695127616645, guid: 74331a6db61ae451787df31499c2b188, type: 3}
+      propertyPath: gold
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 365471635332242631, guid: 74331a6db61ae451787df31499c2b188, type: 3}
       propertyPath: m_Convex
       value: 1

@@ -15,7 +15,7 @@ public class Bounce : MonoBehaviour
 
     private void OnCollisionEnter(Collision collision)
     {
-        if (collision.gameObject.layer == 3)
+        if (collision.gameObject.layer == 3 || collision.gameObject.layer == 8)
         { 
             rb.velocity = Vector3.back * bounce_speed;
         }
@@ -23,7 +23,7 @@ public class Bounce : MonoBehaviour
 
     private void OnCollisionStay(Collision collision)
     {
-        if (collision.gameObject.layer == 3)
+        if (collision.gameObject.layer == 3 || collision.gameObject.layer == 8)
         {
             rb.velocity = Vector3.back * bounce_speed;
         }
