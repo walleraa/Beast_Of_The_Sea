@@ -22,7 +22,7 @@ public class EnemyMovement : MonoBehaviour
     void Update()
     {
         // If the current target has been pillaged, move on to the next
-        if (target_gold.GetComponent<MeshRenderer>().enabled == false)
+        if (target_gold.GetComponent<MeshRenderer>().enabled == false && !defeat)
         {
             FindNextGold();
         }
@@ -43,7 +43,6 @@ public class EnemyMovement : MonoBehaviour
 
     void FindNextGold()
     {
-        Debug.Log("Advance");
         index += 1;
 
         // Move to the next pile of gold in the level

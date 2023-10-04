@@ -4,23 +4,29 @@ using UnityEngine;
 
 public class UpdateGold : MonoBehaviour
 {
-    public static int gold = 5;
+    public static int gold_taken = 0;
 
-    void OnCollisionEnter(Collision collision)
+    private bool pillaged = false;
+
+    void Update()
     {
-        gold--;
-        EventBus.Publish<GoldPillaged>(new GoldPillaged(gold));
-        Debug.Log(gold);
+        if (!GetComponent<MeshRenderer>().enabled && !pillaged)
+        {
+            ++gold_taken;
+            pillaged = true;
+            EventBus.Publish<GoldPillagedEvent>(new GoldPillagedEvent(gold_taken));
+            //Debug.Log(gold);
+        }
     }
 }
 
-public class GoldPillaged
+public class GoldPillagedEvent
 {
     public int new_gold = 0;
-    public GoldPillaged(int _new_gold) { new_gold = _new_gold; }
+    public GoldPillagedEvent(int _new_gold) { new_gold = _new_gold; }
 
     public override string ToString()
     {
-        return "Gold: " + new_gold;
+        return "new_gold: " + new_gold;
     }
 }
