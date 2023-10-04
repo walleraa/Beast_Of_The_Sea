@@ -8,9 +8,11 @@ public class ArrowKeyMovement : MonoBehaviour
     public float top_speed = 40f;
     public float deceleration = 1f;
     public float turn_speed = 30f;
+
     public float water_acceleration = 4f;
-    public float water_speed = 60f;
+    public float water_speed = 70f;
     public float water_deceleration = 4f;
+    public float water_turn_speed = 60f;
 
     private Rigidbody rb;
     private float current_speed;
@@ -30,6 +32,7 @@ public class ArrowKeyMovement : MonoBehaviour
             float horizontal_input = Input.GetAxis("Horizontal");
             float vertical_input = Input.GetAxis("Vertical");
             float rotation_amount = horizontal_input * turn_speed * Time.deltaTime;
+            float water_rotation_amount = horizontal_input * water_turn_speed * Time.deltaTime;
 
             // Move the ship forward when holding forward
             if (vertical_input > 0)
@@ -55,18 +58,30 @@ public class ArrowKeyMovement : MonoBehaviour
             // Add deceleration (water resistance?)
             if (rb.velocity.magnitude > 0f)
             {
-                rb.velocity -= rb.velocity * deceleration * Time.deltaTime;
+                if (!is_down)
+                    rb.velocity -= rb.velocity * deceleration * Time.deltaTime;
+                else
+                    rb.velocity -= rb.velocity * water_deceleration * Time.deltaTime;
             }
 
             // Only turn the ship when moving
             if (rb.velocity.magnitude > 0f)
             {
                 rotation_amount *= rb.velocity.magnitude / top_speed;
+                water_rotation_amount *= rb.velocity.magnitude / water_speed;
 
                 // Turn the boat based on horizontal input and current speed
                 // Calculations from ChatGPT
-                rb.rotation *= Quaternion.Euler(0f, rotation_amount, 0f);
-                rb.velocity = Quaternion.Euler(0f, rotation_amount, 0f) * rb.velocity;
+                if (!is_down)
+                {
+                    rb.rotation *= Quaternion.Euler(0f, rotation_amount, 0f);
+                    rb.velocity = Quaternion.Euler(0f, rotation_amount, 0f) * rb.velocity;
+                }
+                else
+                {
+                    rb.rotation *= Quaternion.Euler(0f, water_rotation_amount, 0f);
+                    rb.velocity = Quaternion.Euler(0f, water_rotation_amount, 0f) * rb.velocity;
+                }
             }
         }
     }

@@ -10,6 +10,7 @@ public class SlowUp : MonoBehaviour
     private Rigidbody rb;
     private bool is_down = false;
     private ArrowKeyMovement arrow_key_movement_script;
+    private bool controls_locked = false;
     
 
     private void Start()
@@ -20,15 +21,18 @@ public class SlowUp : MonoBehaviour
 
     private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Z))
+        if (!controls_locked)
         {
-            if (is_down)
+            if (Input.GetKeyDown(KeyCode.Z))
             {
-                StartCoroutine(RiseUp());
-            }
-            else
-            {
-                StartCoroutine(GoDown());
+                if (is_down)
+                {
+                    StartCoroutine(RiseUp());
+                }
+                else
+                {
+                    StartCoroutine(GoDown());
+                }
             }
         }
     }
@@ -39,7 +43,8 @@ public class SlowUp : MonoBehaviour
         Vector3 direction = transform.rotation * Vector3.forward + transform.rotation * Vector3.down;
 
         // Lock conrols
-        arrow_key_movement_script.SetControlLock(true);
+        controls_locked = true;
+        arrow_key_movement_script.SetControlLock(controls_locked);
 
         // Set rotation and velocity to go down
         rb.velocity = direction * descend_speed;
@@ -53,7 +58,8 @@ public class SlowUp : MonoBehaviour
         transform.rotation = Quaternion.LookRotation(direction);
 
         // Unlock controls
-        arrow_key_movement_script.SetControlLock(false);
+        controls_locked = false;
+        arrow_key_movement_script.SetControlLock(controls_locked);
 
         is_down = true;
         arrow_key_movement_script.SetIsDown(is_down);
@@ -65,7 +71,8 @@ public class SlowUp : MonoBehaviour
         Vector3 direction = transform.rotation * Vector3.forward + transform.rotation * Vector3.up;
 
         // Lock conrols
-        arrow_key_movement_script.SetControlLock(true);
+        controls_locked = true;
+        arrow_key_movement_script.SetControlLock(controls_locked);
 
         // Set rotation and velocity to go up
         rb.velocity = direction * descend_speed;
@@ -79,7 +86,8 @@ public class SlowUp : MonoBehaviour
         transform.rotation = Quaternion.LookRotation(direction);
 
         // Unlock controls
-        arrow_key_movement_script.SetControlLock(false);
+        controls_locked = false;
+        arrow_key_movement_script.SetControlLock(controls_locked);
 
         is_down = false;
         arrow_key_movement_script.SetIsDown(is_down);
