@@ -2991,6 +2991,10 @@ MonoBehaviour:
   top_speed: 20
   deceleration: 0.5
   turn_speed: 10
+  water_acceleration: 4
+  water_speed: 70
+  water_deceleration: 4
+  water_turn_speed: 60
 --- !u!54 &3675036627870543996
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -3052,6 +3056,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bounce_speed: 40
+  descend_speed: -25
+  ascend_speed: 25
 --- !u!114 &8854250849066325251
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3064,6 +3070,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3087e805fdadd4a89b74a8bcd4545a68, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  descend_speed: 10
+  down_timer: 3.5
+  cannons: []
 --- !u!1 &5929785769870773593
 GameObject:
   m_ObjectHideFlags: 0
@@ -5168,6 +5177,10 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 6
       objectReference: {fileID: 0}
+    - target: {fileID: 6000980500468964446, guid: 78a33966cc5639b4387c905a99a39d65, type: 3}
+      propertyPath: Beast_Of_The_Sea
+      value: 
+      objectReference: {fileID: 5892695186024512600}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

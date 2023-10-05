@@ -12,6 +12,7 @@ public class EnemyMovement : MonoBehaviour
     private GameObject target_gold;
     private bool defeat = false;
     private bool pillaging = false;
+    private Vector3 direction;
 
     void Start()
     {
@@ -30,14 +31,12 @@ public class EnemyMovement : MonoBehaviour
         // Move towards the gold unless the game is over or already pillaging
         if (!defeat && !pillaging)
         {
-            rb.freezeRotation = false;
             GreedyMovement();
         }
         else
         {
             rb.velocity = Vector3.zero;
-            rb.rotation = Quaternion.Euler(new Vector3(0f, 0f, 0f));
-            rb.freezeRotation = true;
+            transform.rotation = Quaternion.LookRotation(direction);
         }
     }
 
@@ -61,7 +60,7 @@ public class EnemyMovement : MonoBehaviour
     {
         // Calculations from ChatGPT
         Transform target_location = target_gold.GetComponent<Transform>();
-        Vector3 direction = (target_location.position - transform.position).normalized;
+        direction = (target_location.position - transform.position).normalized;
         rb.velocity = direction * speed;
         transform.rotation = Quaternion.LookRotation(direction);
     }

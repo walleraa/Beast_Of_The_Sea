@@ -6,6 +6,7 @@ public class SlowUp : MonoBehaviour
 {
     public float descend_speed = 10f;
     public float down_timer = 3.5f;
+    public GameObject[] cannons;
 
     private Rigidbody rb;
     private bool is_down = false;
@@ -49,6 +50,12 @@ public class SlowUp : MonoBehaviour
         arrow_key_movement_script.enabled = !controls_locked;
         rb.constraints = constraints;
         bounce_script.SetIsDescending(true);
+
+        // Lock cannons to prevent them firing underwater
+        for (int i = 0; i < cannons.Length; ++i)
+        {
+            cannons[i].GetComponent<OpenFire>().SetCannonLock(true);
+        }
 
         // Set rotation and velocity to go down
         rb.velocity = direction * descend_speed;
@@ -100,7 +107,19 @@ public class SlowUp : MonoBehaviour
         rb.constraints = constraints | RigidbodyConstraints.FreezePositionY;
         bounce_script.SetIsAscending(false);
 
+        // Unlock cannons after rising up=
+        for (int i = 0; i < cannons.Length; ++i)
+        {
+            cannons[i].GetComponent<OpenFire>().SetCannonLock(false);
+        }
+
         is_down = false;
         arrow_key_movement_script.SetIsDown(is_down);
+    }
+
+    // Using control lock instead of disabling component to avoid resetting is_down
+    public void SetControlsLocked(bool param)
+    {
+        controls_locked = param;
     }
 }
