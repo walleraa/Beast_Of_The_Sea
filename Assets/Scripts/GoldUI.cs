@@ -6,7 +6,6 @@ using UnityEngine.UI;
 public class GoldUI : MonoBehaviour
 {
     public int gold = 2;
-    public int pirates = 1;
 
     Subscription<GoldPillagedEvent> gold_pillaged_event_subscription;
 
