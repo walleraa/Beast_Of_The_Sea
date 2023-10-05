@@ -6,46 +6,41 @@ public class TimePillage : MonoBehaviour
 {
     public float pillage_counter = 5f;
 
-    private int pirates_pillaging = 0;
     private float time_start = 0f;
+    private bool being_pillaged = false;
 
     private void Update()
     {
-        //Disable the gold once it's been fully pillaged
-        if (Time.time - time_start > pillage_counter && pirates_pillaging > 0)
+        // Disable the gold once it's been fully pillaged
+        if (Time.time - time_start > pillage_counter && being_pillaged)
         {
             GetComponent<MeshRenderer>().enabled = false;
             GetComponent<MeshCollider>().enabled = false;
+        }
+        // Reset knowledge on a pirate being there so if they disappear the pillaging stops
+        else if (being_pillaged)
+        {
+            being_pillaged = false;
         }
     }
 
     private void OnCollisionEnter(Collision collision)
     {
-        //Prevent the counter from restarting when another pirate arrives
-        if (pirates_pillaging == 0 && collision.gameObject.layer == 7)
+        // Prevent the counter from restarting when another pirate arrives
+        if (!being_pillaged && collision.gameObject.layer == 7)
         {
-            ++pirates_pillaging;
+            being_pillaged = true;
             time_start = Time.time;
         }
         else if (collision.gameObject.layer == 7)
         {
-            ++pirates_pillaging;
+            being_pillaged = false;
         }
     }
 
-    private void OnCollisionExit(Collision collision)
+    // Keep checking if there's a pirate there
+    private void OnCollisionStay(Collision collision)
     {
-        if (collision.gameObject.layer == 7)
-        {
-            --pirates_pillaging;
-            Debug.Log("Done");
-            // If all pirates have been sunk, reset the pillage timer
-            // Should do this on its own using pirates_pillaging
-
-            //if (pirates_pillaging == 0)
-            //{
-            //    time_start = 0f;
-            //}
-        }
+        being_pillaged = true;
     }
 }

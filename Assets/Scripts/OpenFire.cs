@@ -8,6 +8,7 @@ public class OpenFire : MonoBehaviour
     public float cooldown = 2f;
     public float cannonball_speed = 50f;
     public float cannonball_life = .5f;
+    public float cannonball_angle = .1f;
 
     private bool cannons_locked = false;
     private bool on_cooldown = false;
@@ -32,7 +33,7 @@ public class OpenFire : MonoBehaviour
 
     void Fire()
     {
-        Vector3 bearing = transform.rotation * Vector3.forward + new Vector3(0f, 0f, 0f);
+        Vector3 bearing = transform.rotation * Vector3.forward + new Vector3(0f, cannonball_angle, 0f);
         // Instantiate the cannonball
         GameObject cannonball = Instantiate(cannonball_prefab, transform.position + bearing, new Quaternion(0, 0, 0, 0));
 
