@@ -52,6 +52,7 @@ public class OpenFire : MonoBehaviour
         // Prevent from going down while on cooldown
         slow_up_script.SetControlsLocked(true);
 
+        on_cooldown = true;
         yield return new WaitForSeconds(cooldown);
         on_cooldown = false;
 
