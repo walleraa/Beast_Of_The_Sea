@@ -1675,6 +1675,8 @@ GameObject:
   - component: {fileID: 1417299055779986340}
   - component: {fileID: 8516383235545469432}
   - component: {fileID: 7743851906204336526}
+  - component: {fileID: 2560586720787651747}
+  - component: {fileID: 534676922777645842}
   m_Layer: 7
   m_Name: Pirate
   m_TagString: Untagged
@@ -1799,6 +1801,33 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pillage_counter: 5
+--- !u!114 &2560586720787651747
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5857893993220194168}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b85a110cff1c849228f3332b7338eb79, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sinking_speed: 20
+  sinking_duration: 4
+  sinking_angle: 8
+--- !u!114 &534676922777645842
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5857893993220194168}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6a1f4f70bb8ac429fb73360052b3e133, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &6204973411244957895
 GameObject:
   m_ObjectHideFlags: 0

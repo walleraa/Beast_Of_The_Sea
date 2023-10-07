@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 4828104169867154485}
   - component: {fileID: 8584803795129082562}
   - component: {fileID: 8195490208081150321}
+  - component: {fileID: 5507495699883515594}
   m_Layer: 9
   m_Name: Cannonball
   m_TagString: Untagged
@@ -238,3 +239,15 @@ TrailRenderer:
   m_Autodestruct: 0
   m_Emitting: 1
   m_ApplyActiveColorSpace: 1
+--- !u!114 &5507495699883515594
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5527440816302895980}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 213d4ccef49f04614a623412bc938751, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
