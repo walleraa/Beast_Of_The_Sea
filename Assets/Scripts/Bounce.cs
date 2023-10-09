@@ -37,12 +37,8 @@ public class Bounce : MonoBehaviour
         else if (is_ascending)
             back.y = ascend_speed/bounce_speed;
 
-        if (collision.gameObject.layer == 3 || collision.gameObject.layer == 8)
+        if (collision.gameObject.layer == 3 || collision.gameObject.layer == 8 || collision.gameObject.layer == 10)
         {
-            // Fine I'll do an actual bounce
-            //back.x *= -1;
-            //back.z *= -1;
-
             rb.velocity = back * bounce_speed;
         }
     }
