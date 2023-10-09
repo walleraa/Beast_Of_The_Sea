@@ -2,3 +2,5 @@ Stylized_Pirate_Ship - Comeback
 rock_01 - CrazyTextures
 Gold Coins - Devtoid
 Colonial Ship - Nokobot
+Wood texture - Lowlypoly
+Island texture - CBAssets website
