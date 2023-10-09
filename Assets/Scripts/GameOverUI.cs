@@ -3,15 +3,14 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class GameLoop : MonoBehaviour
+public class GameOverUI : MonoBehaviour
 {
-    public string current_scene = "Level_Template";
     public int level_gold = 2;
     public int level_pirates = 1;
 
     Subscription<PirateSunkEvent> pirate_sunk_event_subscription;
     Subscription<GoldPillagedEvent> gold_pillaged_event_subscription;
-    bool can_restart = false;
+    private bool game_over = false;
 
     void Start()
     {
@@ -22,20 +21,24 @@ public class GameLoop : MonoBehaviour
     void _OnPirateSunkEvent(PirateSunkEvent e)
     {
         if (level_pirates - e.new_pirate == 0)
-            can_restart = true;
+        {
+            Debug.Log("Victory");
+            if (!game_over)
+                GetComponent<TMPro.TextMeshProUGUI>().text = "You Win! To Davy Jones's Locker!";
+
+            game_over = true;
+        }
     }
 
     void _OnGoldPillagedEvent(GoldPillagedEvent e)
     {
         if (level_gold - e.new_gold == 0)
-            can_restart = true;
-    }
-
-    private void Update()
-    {
-        if (Input.GetKeyDown(KeyCode.Alpha0) && can_restart)
         {
-            SceneManager.LoadScene(current_scene);
+            Debug.Log("Defeat");
+            if (!game_over)
+                GetComponent<TMPro.TextMeshProUGUI>().text = "You Lose! Gold Pillaged!";
+
+            game_over = true;
         }
     }
 
