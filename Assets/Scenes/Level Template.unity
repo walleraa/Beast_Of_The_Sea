@@ -2244,6 +2244,14 @@ PrefabInstance:
       propertyPath: offset.z
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 5590298611268065505, guid: b0470a7873c04482186842d4af4555f4, type: 3}
+      propertyPath: water_turn_speed
+      value: 80
+      objectReference: {fileID: 0}
+    - target: {fileID: 5590298611268065505, guid: b0470a7873c04482186842d4af4555f4, type: 3}
+      propertyPath: water_acceleration
+      value: 40
+      objectReference: {fileID: 0}
     - target: {fileID: 5892695186024512600, guid: b0470a7873c04482186842d4af4555f4, type: 3}
       propertyPath: m_Name
       value: Beast of the Sea
