@@ -50,6 +50,7 @@ public class SlowUp : MonoBehaviour
         arrow_key_movement_script.enabled = !controls_locked;
         rb.constraints = constraints;
         bounce_script.SetIsDescending(true);
+        GetComponent<RisingTide>().enabled = false;
 
         // Lock cannons to prevent them firing underwater
         for (int i = 0; i < cannons.Length; ++i)
@@ -106,6 +107,7 @@ public class SlowUp : MonoBehaviour
         arrow_key_movement_script.enabled = !controls_locked;
         rb.constraints = constraints | RigidbodyConstraints.FreezePositionY;
         bounce_script.SetIsAscending(false);
+        GetComponent<RisingTide>().enabled = true;
 
         // Unlock cannons after rising up=
         for (int i = 0; i < cannons.Length; ++i)
