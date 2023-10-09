@@ -30,6 +30,7 @@ public class UpdatePirate : MonoBehaviour
     {
         // This method will be called when a new scene is loaded.
         Debug.Log("Scene loaded: " + scene.name);
+        pirates_sunk = 0;
         // You can put your scene-specific code here.
     }
 }
