@@ -2909,6 +2909,8 @@ GameObject:
   - component: {fileID: 5594801493724751240}
   - component: {fileID: 8854250849066325251}
   - component: {fileID: 8709961802403520487}
+  - component: {fileID: 2813679838560895774}
+  - component: {fileID: 8192636485393695943}
   m_Layer: 6
   m_Name: Beast of the Sea
   m_TagString: Untagged
@@ -3080,6 +3082,8 @@ MonoBehaviour:
   - {fileID: 3157716173087787724}
   - {fileID: 6542631232190829584}
   - {fileID: 8520051408953919129}
+  camera_init_angle: 18.85
+  camera_down_angle: 0
 --- !u!114 &8709961802403520487
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3093,6 +3097,34 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   current_scene: Level Template
+  level_gold: 2
+  level_pirates: 1
+--- !u!114 &2813679838560895774
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5892695186024512600}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dc8a5a674037340d792c4dc99af988c1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  y_position: 4.25
+  rise_time: 0.1
+--- !u!114 &8192636485393695943
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5892695186024512600}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4cdc854883f9147369d01b56c6f9c68a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &5929785769870773593
 GameObject:
   m_ObjectHideFlags: 0
