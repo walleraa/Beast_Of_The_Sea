@@ -24,7 +24,6 @@ public class SlowUp : MonoBehaviour
         arrow_key_movement_script = GetComponent<ArrowKeyMovement>();
         bounce_script = GetComponent<Bounce>();
         main_camera_transform = gameObject.transform.GetChild(0);
-        Debug.Log(main_camera_transform);
     }
 
     private void Update()
@@ -84,7 +83,7 @@ public class SlowUp : MonoBehaviour
         bounce_script.SetIsDescending(false);
 
         // Angle the camera up
-        main_camera_transform.rotation = Quaternion.Euler(new Vector3(camera_down_angle, 0f, 0f));
+        main_camera_transform.rotation = Quaternion.Euler(camera_down_angle, transform.eulerAngles.y, 0f);
 
         is_down = true;
         arrow_key_movement_script.SetIsDown(is_down);
@@ -102,7 +101,7 @@ public class SlowUp : MonoBehaviour
         bounce_script.SetIsAscending(true);
 
         // Angle the camera back down
-        main_camera_transform.rotation = Quaternion.Euler(new Vector3(camera_init_angle, 0f, 0f));
+        main_camera_transform.rotation = Quaternion.Euler(camera_init_angle, transform.eulerAngles.y, 0f);
 
         // Set rotation and velocity to go up
         rb.velocity = direction * descend_speed;
