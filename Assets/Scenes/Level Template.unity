@@ -1333,6 +1333,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   level_gold: 2
   level_pirates: 1
+  current_level_num: 1
 --- !u!114 &1457886709
 MonoBehaviour:
   m_ObjectHideFlags: 0
