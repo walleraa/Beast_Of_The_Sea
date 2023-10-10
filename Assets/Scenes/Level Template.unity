@@ -2286,6 +2286,26 @@ PrefabInstance:
       propertyPath: offset.z
       value: -1
       objectReference: {fileID: 0}
+    - target: {fileID: 6306291849951226331, guid: b0470a7873c04482186842d4af4555f4, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.9865008
+      objectReference: {fileID: 0}
+    - target: {fileID: 6306291849951226331, guid: b0470a7873c04482186842d4af4555f4, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0.16375636
+      objectReference: {fileID: 0}
+    - target: {fileID: 6306291849951226331, guid: b0470a7873c04482186842d4af4555f4, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6306291849951226331, guid: b0470a7873c04482186842d4af4555f4, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6306291849951226331, guid: b0470a7873c04482186842d4af4555f4, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 18.85
+      objectReference: {fileID: 0}
     - target: {fileID: 7689653758829159941, guid: b0470a7873c04482186842d4af4555f4, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
