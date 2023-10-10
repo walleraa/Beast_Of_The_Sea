@@ -17,7 +17,11 @@ public class EnemyMovement : MonoBehaviour
     void Start()
     {
         rb = GetComponent<Rigidbody>();
-        target_gold = gold_list[index];
+
+        // If length is greatr than 0 start moving
+        if (gold_list.Length > 0)
+            target_gold = gold_list[index];
+        // If length is 0 then just disable this component
     }
 
     void Update()

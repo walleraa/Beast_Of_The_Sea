@@ -25,7 +25,8 @@ public class Sunk : MonoBehaviour
         if (sinking)
         {
             // Heading to the Locker
-            rb.velocity = Vector3.down * sinking_speed;
+            //rb.velocity = Vector3.down * sinking_speed;
+            transform.position = transform.position + Vector3.down * .1f;
         }
     }
 
