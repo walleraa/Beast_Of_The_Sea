@@ -2994,10 +2994,10 @@ MonoBehaviour:
   top_speed: 20
   deceleration: 0.5
   turn_speed: 10
-  water_acceleration: 25
+  water_acceleration: 40
   water_speed: 60
   water_deceleration: 0.5
-  water_turn_speed: 60
+  water_turn_speed: 80
 --- !u!54 &3675036627870543996
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -3096,7 +3096,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fd993f02e3cc04af28074e47c3582523, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  current_scene: Level Template
+  current_level: Level Template
+  next_level: Level 1
   level_gold: 2
   level_pirates: 1
 --- !u!114 &2813679838560895774

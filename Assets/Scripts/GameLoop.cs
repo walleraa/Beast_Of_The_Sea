@@ -5,13 +5,15 @@ using UnityEngine.SceneManagement;
 
 public class GameLoop : MonoBehaviour
 {
-    public string current_scene = "Level_Template";
+    public string current_level = "Level Template";
+    public string next_level = "Level 1";
     public int level_gold = 2;
     public int level_pirates = 1;
 
     Subscription<PirateSunkEvent> pirate_sunk_event_subscription;
     Subscription<GoldPillagedEvent> gold_pillaged_event_subscription;
     bool can_restart = false;
+    bool victory = false;
 
     void Start()
     {
@@ -22,7 +24,10 @@ public class GameLoop : MonoBehaviour
     void _OnPirateSunkEvent(PirateSunkEvent e)
     {
         if (level_pirates - e.new_pirate == 0)
+        {
             can_restart = true;
+            victory = true;
+        }
     }
 
     void _OnGoldPillagedEvent(GoldPillagedEvent e)
@@ -33,9 +38,13 @@ public class GameLoop : MonoBehaviour
 
     private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Alpha0) && can_restart)
+        if (Input.GetKeyDown(KeyCode.Alpha1) && can_restart && !victory)
         {
-            SceneManager.LoadScene(current_scene);
+            SceneManager.LoadScene(current_level);
+        }
+        else if (Input.GetKeyDown(KeyCode.Alpha1) && can_restart && victory)
+        {
+            SceneManager.LoadScene(next_level);
         }
     }
 

@@ -7,6 +7,7 @@ public class GameOverUI : MonoBehaviour
 {
     public int level_gold = 2;
     public int level_pirates = 1;
+    public int current_level_num = 1;
 
     Subscription<PirateSunkEvent> pirate_sunk_event_subscription;
     Subscription<GoldPillagedEvent> gold_pillaged_event_subscription;
@@ -24,7 +25,12 @@ public class GameOverUI : MonoBehaviour
         {
             Debug.Log("Victory");
             if (!game_over)
-                GetComponent<TMPro.TextMeshProUGUI>().text = "You Win! To Davy Jones's Locker!";
+            {
+                if (current_level_num == 6)
+                    GetComponent<TMPro.TextMeshProUGUI>().text = "You Win! To Davy Jones's Locker!";
+                else
+                    GetComponent<TMPro.TextMeshProUGUI>().text = "You Win!\nPress '1' to advance to level " + (current_level_num + 1) + "\nPress '0' to go to menu";
+            }
 
             game_over = true;
         }
@@ -36,7 +42,7 @@ public class GameOverUI : MonoBehaviour
         {
             Debug.Log("Defeat");
             if (!game_over)
-                GetComponent<TMPro.TextMeshProUGUI>().text = "You Lose! Gold Pillaged!";
+                GetComponent<TMPro.TextMeshProUGUI>().text = "You Lose! Gold Pillaged!\nPress '1' to restart level " + (current_level_num + 1) + "\nPress '0' to go to menu"; ;
 
             game_over = true;
         }
