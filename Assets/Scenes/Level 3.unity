@@ -8326,9 +8326,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 127588700bf9548159e72647a21a43bc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  level_gold: 2
+  level_gold: 1
   level_pirates: 1
-  current_level_num: 1
+  current_level_num: 3
 --- !u!114 &1457886709
 MonoBehaviour:
   m_ObjectHideFlags: 0
