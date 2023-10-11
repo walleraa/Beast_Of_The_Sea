@@ -23,9 +23,8 @@ public class GameLoop : MonoBehaviour
 
     void _OnPirateSunkEvent(PirateSunkEvent e)
     {
-        if (level_pirates - e.new_pirate == 0)
+        if (level_pirates - e.new_pirate == 0 && !can_restart)
         {
-            can_restart = true;
             victory = true;
         }
     }
@@ -38,11 +37,11 @@ public class GameLoop : MonoBehaviour
 
     private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Alpha1) && can_restart && !victory)
+        if (Input.GetKeyDown(KeyCode.Alpha1) && can_restart)
         {
             SceneManager.LoadScene(current_level);
         }
-        else if (Input.GetKeyDown(KeyCode.Alpha1) && can_restart && victory)
+        else if (Input.GetKeyDown(KeyCode.Alpha1) && victory)
         {
             SceneManager.LoadScene(next_level);
         }
