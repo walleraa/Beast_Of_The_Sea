@@ -2908,7 +2908,6 @@ GameObject:
   - component: {fileID: 7849388299180807549}
   - component: {fileID: 5594801493724751240}
   - component: {fileID: 8854250849066325251}
-  - component: {fileID: 8709961802403520487}
   - component: {fileID: 2813679838560895774}
   - component: {fileID: 8192636485393695943}
   m_Layer: 6
@@ -3084,22 +3083,6 @@ MonoBehaviour:
   - {fileID: 8520051408953919129}
   camera_init_angle: 18.85
   camera_down_angle: 0
---- !u!114 &8709961802403520487
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5892695186024512600}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fd993f02e3cc04af28074e47c3582523, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  current_level: Level Template
-  next_level: Level 1
-  level_gold: 2
-  level_pirates: 1
 --- !u!114 &2813679838560895774
 MonoBehaviour:
   m_ObjectHideFlags: 0
