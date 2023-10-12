@@ -120,7 +120,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2ad6e9af031ad48028b87a47b28ce3cf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pillage_counter: 5
 --- !u!114 &584225944010454767
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -133,3 +132,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8be21125c0a034dc2bb63402fc4f8799, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  pillage_counter: 5
