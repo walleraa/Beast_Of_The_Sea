@@ -6,3 +6,4 @@ Wood texture - Lowlypoly
 Island texture - CBAssets website
 Classical Tunes Flying Dutchman - A14 Games
 Grenade Sounds - MGWSoundDesign
+Coins SFX - Little Robot Sound Factory

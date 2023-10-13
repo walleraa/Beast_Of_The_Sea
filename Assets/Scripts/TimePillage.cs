@@ -9,6 +9,7 @@ public class TimePillage : MonoBehaviour
     private float time_start = 0f;
     private float frames_per_second = 0f;
     private int pirates_pillaging = 0;
+    private AudioSource audio_source;
 
     private bool exists = true;
 
