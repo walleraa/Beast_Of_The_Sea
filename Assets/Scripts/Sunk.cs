@@ -12,12 +12,14 @@ public class Sunk : MonoBehaviour
     private EnemyMovement enemy_movement_script;
     private BoxCollider box_collider;
     private bool sinking = false;
+    private AudioSource audio_source;
 
     private void Start()
     {
         rb = GetComponent<Rigidbody>();
         enemy_movement_script = GetComponent<EnemyMovement>();
         box_collider = GetComponent<BoxCollider>();
+        audio_source = GetComponent<AudioSource>();
     }
 
     private void Update()
@@ -43,6 +45,9 @@ public class Sunk : MonoBehaviour
         
         // Disable collider in order to stop any pillaging
         box_collider.enabled = false;
+
+        // Play an explosion sound to emphasize the sinking
+        audio_source.Play();
 
         // Start the process of sinking
         StartCoroutine(Sinking());

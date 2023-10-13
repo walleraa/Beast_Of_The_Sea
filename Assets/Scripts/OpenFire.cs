@@ -13,10 +13,12 @@ public class OpenFire : MonoBehaviour
     private bool cannons_locked = false;
     private bool on_cooldown = false;
     private SlowUp slow_up_script;
+    private AudioSource audio_source;
 
     private void Start()
     {
         slow_up_script = GetComponentInParent<SlowUp>();
+        audio_source = GetComponentInParent<AudioSource>();
     }
 
     private void Update()
@@ -33,12 +35,16 @@ public class OpenFire : MonoBehaviour
 
     void Fire()
     {
+
         Vector3 bearing = transform.rotation * Vector3.forward + new Vector3(0f, cannonball_angle, 0f);
         // Instantiate the cannonball
         GameObject cannonball = Instantiate(cannonball_prefab, transform.position + bearing, new Quaternion(0, 0, 0, 0));
 
         // Shoot the cannonball
         cannonball.GetComponent<Rigidbody>().velocity = bearing * cannonball_speed;
+
+        // Play the sound of shooting the cannonball
+        audio_source.Play();
 
         // Destroy the cannonball after some time
         Destroy(cannonball, cannonball_life);
