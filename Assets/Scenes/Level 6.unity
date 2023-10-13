@@ -1153,7 +1153,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   current_level: Level 6
   next_level: Menu
-  level_gold: 7
+  level_gold: 8
   level_pirates: 5
   victory_music_clip: {fileID: 8300000, guid: 3317a5f42a2e1e5418a44b153ac2c9b9, type: 3}
 --- !u!82 &661099896
@@ -2662,7 +2662,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 127588700bf9548159e72647a21a43bc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  level_gold: 7
+  level_gold: 8
   level_pirates: 5
   current_level_num: 6
 --- !u!114 &1457886709
@@ -3275,7 +3275,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f947f4d12801c4d03a209d7c9381fb9f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gold: 7
+  gold: 8
 --- !u!114 &1601171369
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3309,7 +3309,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'Gold: 7'
+  m_Text: 'Gold: 8'
 --- !u!222 &1601171370
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -4516,7 +4516,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7689653758829159941, guid: b0470a7873c04482186842d4af4555f4, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 200
+      value: 193
       objectReference: {fileID: 0}
     - target: {fileID: 7689653758829159941, guid: b0470a7873c04482186842d4af4555f4, type: 3}
       propertyPath: m_LocalPosition.y
@@ -4524,7 +4524,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7689653758829159941, guid: b0470a7873c04482186842d4af4555f4, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -200
+      value: -193
       objectReference: {fileID: 0}
     - target: {fileID: 7689653758829159941, guid: b0470a7873c04482186842d4af4555f4, type: 3}
       propertyPath: m_LocalRotation.w
