@@ -9,16 +9,21 @@ public class GameLoop : MonoBehaviour
     public string next_level = "Level 1";
     public int level_gold = 2;
     public int level_pirates = 1;
+    public AudioClip victory_music_clip;
 
-    Subscription<PirateSunkEvent> pirate_sunk_event_subscription;
-    Subscription<GoldPillagedEvent> gold_pillaged_event_subscription;
-    bool can_restart = false;
-    bool victory = false;
+    private Subscription<PirateSunkEvent> pirate_sunk_event_subscription;
+    private Subscription<GoldPillagedEvent> gold_pillaged_event_subscription;
+    private bool can_restart = false;
+    private bool victory = false;
+    private AudioSource audio_source;
 
     void Start()
     {
         pirate_sunk_event_subscription = EventBus.Subscribe<PirateSunkEvent>(_OnPirateSunkEvent);
         gold_pillaged_event_subscription = EventBus.Subscribe<GoldPillagedEvent>(_OnGoldPillagedEvent);
+        audio_source = GetComponent<AudioSource>();
+        if (!audio_source.isPlaying)
+            audio_source.Play();
     }
 
     void _OnPirateSunkEvent(PirateSunkEvent e)
@@ -26,6 +31,17 @@ public class GameLoop : MonoBehaviour
         if (level_pirates - e.new_pirate == 0 && !can_restart)
         {
             victory = true;
+
+            // Switch to victory music
+            if (audio_source.isPlaying)
+            {
+                audio_source.Pause();
+                audio_source.clip = victory_music_clip;
+                audio_source.Play();
+
+                // Don't want to loop the victory music
+                audio_source.loop = false;
+            }
         }
     }
 

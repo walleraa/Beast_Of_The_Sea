@@ -2992,7 +2992,7 @@ MonoBehaviour:
   acceleration: 15
   top_speed: 30
   deceleration: 0.5
-  turn_speed: 10
+  turn_speed: 20
   water_acceleration: 40
   water_speed: 60
   water_deceleration: 0.5
