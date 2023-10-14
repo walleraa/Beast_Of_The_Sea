@@ -9,8 +9,7 @@ public class SlowUp : MonoBehaviour
     public GameObject[] cannons;
     public float camera_init_angle = 18.85f;
     public float camera_down_angle = 0f;
-    public AudioSource audio_source;
-    public AudioClip bell_toll_clip;
+    //public AudioSource audio_source;
 
     private Rigidbody rb;
     private bool is_down = false;
@@ -19,6 +18,7 @@ public class SlowUp : MonoBehaviour
     private bool controls_locked = false;
     private RigidbodyConstraints constraints = RigidbodyConstraints.FreezeRotationX | RigidbodyConstraints.FreezeRotationY | RigidbodyConstraints.FreezeRotationZ;
     private Transform main_camera_transform;
+    private AudioSource audio_source;
 
     private void Start()
     {
@@ -26,6 +26,7 @@ public class SlowUp : MonoBehaviour
         arrow_key_movement_script = GetComponent<ArrowKeyMovement>();
         bounce_script = GetComponent<Bounce>();
         main_camera_transform = gameObject.transform.GetChild(0);
+        audio_source = GetComponent<AudioSource>();
     }
 
     private void Update()
@@ -71,8 +72,8 @@ public class SlowUp : MonoBehaviour
         transform.rotation = Quaternion.LookRotation(direction);
         Debug.Log(rb.velocity);
 
-        // Change audio
-        audio_source.volume = .5f;
+        // Play audio
+        audio_source.Play();
 
         yield return new WaitForSeconds(down_timer);
 
@@ -112,10 +113,10 @@ public class SlowUp : MonoBehaviour
         rb.velocity = direction * descend_speed;
         transform.rotation = Quaternion.LookRotation(direction);
 
-        yield return new WaitForSeconds(down_timer);
+        // Play audio
+        audio_source.Play();
 
-        // Change audio
-        audio_source.volume = 1f;
+        yield return new WaitForSeconds(down_timer);
 
         // Set rotation and velocity to stabilize
         direction = transform.rotation * Vector3.forward + transform.rotation * Vector3.down;

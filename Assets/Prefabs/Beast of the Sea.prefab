@@ -3084,8 +3084,6 @@ MonoBehaviour:
   - {fileID: 8520051408953919129}
   camera_init_angle: 18.85
   camera_down_angle: 0
-  audio_source: {fileID: 0}
-  bell_toll_clip: {fileID: 8300000, guid: b402eb076fb4d41e9ae70cac8c47c444, type: 3}
 --- !u!114 &2813679838560895774
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3122,9 +3120,9 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: fc96116dc3c141440aabb5605744fea2, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 7c0c1b87d7b924976acbde46edbccf66, type: 3}
   m_PlayOnAwake: 0
-  m_Volume: 0.5
+  m_Volume: 1
   m_Pitch: 1
   Loop: 0
   Mute: 0

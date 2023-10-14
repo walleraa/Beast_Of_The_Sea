@@ -18,7 +18,7 @@ public class OpenFire : MonoBehaviour
     private void Start()
     {
         slow_up_script = GetComponentInParent<SlowUp>();
-        audio_source = GetComponentInParent<AudioSource>();
+        audio_source = GetComponent<AudioSource>();
     }
 
     private void Update()
