@@ -29,6 +29,7 @@ public class TimePillage : MonoBehaviour
             {
                 Debug.Log("End Pillaging");
                 exists = false;
+                Debug.Log(time_start);
             }
 
             // Disable the renderer and collider
@@ -40,11 +41,10 @@ public class TimePillage : MonoBehaviour
     private void OnCollisionEnter(Collision collision)
     {
         if (debug)
-        {
             Debug.Log("Start pillaging");
-            pirates_pillaging += 1;
-            UpdateTime();
-        }
+
+        pirates_pillaging += 1;
+        UpdateTime();
     }
 
     // Keep checking if there's a pirate there
@@ -56,15 +56,17 @@ public class TimePillage : MonoBehaviour
     // Sometimes the pirates slide off the collider
     private void OnCollisionExit(Collision collision)
     {
+        if (debug)
+            Debug.Log("Pause pillaging");
+
         pirates_pillaging -= 1;
     }
 
     private void UpdateTime()
     {
         time_start += 1 / (frames_per_second * pirates_pillaging);
+
         if (debug)
-        {
             Debug.Log(time_start);
-        }
     }
 }
