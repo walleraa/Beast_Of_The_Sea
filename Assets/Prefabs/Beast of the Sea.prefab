@@ -3084,6 +3084,8 @@ MonoBehaviour:
   - {fileID: 8520051408953919129}
   camera_init_angle: 18.85
   camera_down_angle: 0
+  audio_source: {fileID: 0}
+  bell_toll_clip: {fileID: 8300000, guid: b402eb076fb4d41e9ae70cac8c47c444, type: 3}
 --- !u!114 &2813679838560895774
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3136,7 +3138,7 @@ AudioSource:
   rolloffMode: 0
   BypassEffects: 0
   BypassListenerEffects: 0
-  BypassReverbZones: 0
+  BypassReverbZones: 1
   rolloffCustomCurve:
     serializedVersion: 2
     m_Curve:

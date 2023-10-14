@@ -9,6 +9,8 @@ public class SlowUp : MonoBehaviour
     public GameObject[] cannons;
     public float camera_init_angle = 18.85f;
     public float camera_down_angle = 0f;
+    public AudioSource audio_source;
+    public AudioClip bell_toll_clip;
 
     private Rigidbody rb;
     private bool is_down = false;
@@ -69,6 +71,9 @@ public class SlowUp : MonoBehaviour
         transform.rotation = Quaternion.LookRotation(direction);
         Debug.Log(rb.velocity);
 
+        // Change audio
+        audio_source.volume = .5f;
+
         yield return new WaitForSeconds(down_timer);
 
         // Set rotation and velocity to stablize
@@ -108,6 +113,9 @@ public class SlowUp : MonoBehaviour
         transform.rotation = Quaternion.LookRotation(direction);
 
         yield return new WaitForSeconds(down_timer);
+
+        // Change audio
+        audio_source.volume = 1f;
 
         // Set rotation and velocity to stabilize
         direction = transform.rotation * Vector3.forward + transform.rotation * Vector3.down;
